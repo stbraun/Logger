@@ -10,6 +10,8 @@
 		32BCD5F7204F12C00039E1A8 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BCD5ED204F12BF0039E1A8 /* Logger.framework */; };
 		32BCD5FC204F12C00039E1A8 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD5FB204F12C00039E1A8 /* LoggerTests.swift */; };
 		32BCD5FE204F12C00039E1A8 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BCD5F0204F12BF0039E1A8 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32BCD608204F12F90039E1A8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD607204F12F80039E1A8 /* Logger.swift */; };
+		32BCD609204F13850039E1A8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD607204F12F80039E1A8 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		32BCD5F6204F12BF0039E1A8 /* LoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BCD5FB204F12C00039E1A8 /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		32BCD5FD204F12C00039E1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32BCD607204F12F80039E1A8 /* Logger.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 		32BCD5EF204F12BF0039E1A8 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				32BCD607204F12F80039E1A8 /* Logger.swift */,
 				32BCD5F0204F12BF0039E1A8 /* Logger.h */,
 				32BCD5F1204F12BF0039E1A8 /* Info.plist */,
 			);
@@ -148,6 +152,7 @@
 				TargetAttributes = {
 					32BCD5EC204F12BF0039E1A8 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					32BCD5F5204F12BF0039E1A8 = {
@@ -196,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BCD608204F12F90039E1A8 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32BCD5FC204F12C00039E1A8 /* LoggerTests.swift in Sources */,
+				32BCD609204F13850039E1A8 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +340,7 @@
 		32BCD602204F12C00039E1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -347,6 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stbraun.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -354,6 +363,7 @@
 		32BCD603204F12C00039E1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -375,6 +385,7 @@
 		32BCD605204F12C00039E1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LoggerTests/Info.plist;
@@ -388,6 +399,7 @@
 		32BCD606204F12C00039E1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LoggerTests/Info.plist;
