@@ -81,11 +81,18 @@ class LoggerTests: XCTestCase {
     
     /// Test registration of logger profiles for specific levels
     func testLoggerProfileForSpecificLevels() {
-        Log.removeLogProfileFromAllLevels(loggerProfile: loggerForTest)
-        Log.addLogProfileToLevel(logLevel: LogLevel.DEBUG, loggerProfile: loggerForTest)
-        Log.addLogProfileToLevel(logLevel: LogLevel.FATAL, loggerProfile: loggerForTest)
-        XCTAssert(Log.hasLoggerForLevel(logLevel: LogLevel.DEBUG))
-        XCTAssert(Log.hasLoggerForLevel(logLevel: LogLevel.FATAL))
+        for testLevel in LogLevel.allValues {
+            testRemoveLoggerProfilesFromAllLevels()
+            Log.addLogProfileToLevel(logLevel: testLevel, loggerProfile: loggerForTest)
+            for level in LogLevel.allValues {
+                if level == testLevel {
+                    XCTAssert(Log.hasLoggerForLevel(logLevel: level))
+                } else {
+                    XCTAssertFalse(Log.hasLoggerForLevel(logLevel: level))
+                }
+            }
+        }
+
     }
     
     /// Test removing a logger profile from a specific level
@@ -100,6 +107,20 @@ class LoggerTests: XCTestCase {
                 } else {
                     XCTAssert(Log.hasLoggerForLevel(logLevel: level))
                 }
+            }
+        }
+    }
+    
+    /// Test registration of error logging profile
+    func testErrorLoggingProfile() {
+        testRemoveLoggerProfilesFromAllLevels()
+        Log.addLogProfileToErrorLevels(errorLoggerProfile: loggerForTest)
+        let errorLevels = [LogLevel.ERROR, LogLevel.FATAL]
+        for level in LogLevel.allValues {
+            if errorLevels.contains(level) {
+                XCTAssert(Log.hasLoggerForLevel(logLevel: level))
+            } else {
+                XCTAssertFalse(Log.hasLoggerForLevel(logLevel: level))
             }
         }
     }

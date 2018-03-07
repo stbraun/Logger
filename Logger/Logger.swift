@@ -10,7 +10,7 @@ extension LoggerProfile {
     public func getCurrentDateString() -> String{
         let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyy-MM-dd hh:mm:ss"
+        dateFormatter.dateFormat = "yyy-MM-dd HH:mm:ss"
         return dateFormatter.string(from: date)
     }
     
@@ -130,6 +130,17 @@ extension Logger {
     public static func addLogProfileToAllLevels( defaultLoggerProfile: LoggerProfile) {
         for level in LogLevel.allValues {
             setLogLevel(logLevel: level, loggerProfile: defaultLoggerProfile)
+        }
+    }
+
+    ///
+    /// Add a logger profile to ERROR and FATAL log levels.
+    ///
+    /// - paramster loggerProfile: the `LoggerProfile` to add
+    ///
+    public static func addLogProfileToErrorLevels( errorLoggerProfile: LoggerProfile) {
+        for level in [LogLevel.ERROR, LogLevel.FATAL] {
+            setLogLevel(logLevel: level, loggerProfile: errorLoggerProfile)
         }
     }
 
