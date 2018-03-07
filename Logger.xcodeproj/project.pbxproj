@@ -12,6 +12,7 @@
 		32BCD608204F12F90039E1A8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD607204F12F80039E1A8 /* Logger.swift */; };
 		32BCD609204F13850039E1A8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD607204F12F80039E1A8 /* Logger.swift */; };
 		32BCD60D204F3B4D0039E1A8 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BCD5ED204F12BF0039E1A8 /* Logger.framework */; };
+		32BCD61320506EFA0039E1A8 /* LoggerSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD61220506EFA0039E1A8 /* LoggerSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		32BCD5FB204F12C00039E1A8 /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		32BCD5FD204F12C00039E1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32BCD607204F12F80039E1A8 /* Logger.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = Logger.swift; sourceTree = "<group>"; };
+		32BCD61220506EFA0039E1A8 /* LoggerSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				32BCD607204F12F80039E1A8 /* Logger.swift */,
 				32BCD5F0204F12BF0039E1A8 /* Logger.h */,
 				32BCD5F1204F12BF0039E1A8 /* Info.plist */,
+				32BCD61220506EFA0039E1A8 /* LoggerSystem.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BCD61320506EFA0039E1A8 /* LoggerSystem.swift in Sources */,
 				32BCD608204F12F90039E1A8 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
