@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32BCD5F7204F12C00039E1A8 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BCD5ED204F12BF0039E1A8 /* Logger.framework */; };
 		32BCD5FC204F12C00039E1A8 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD5FB204F12C00039E1A8 /* LoggerTests.swift */; };
 		32BCD5FE204F12C00039E1A8 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BCD5F0204F12BF0039E1A8 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32BCD608204F12F90039E1A8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD607204F12F80039E1A8 /* Logger.swift */; };
 		32BCD609204F13850039E1A8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCD607204F12F80039E1A8 /* Logger.swift */; };
+		32BCD60D204F3B4D0039E1A8 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BCD5ED204F12BF0039E1A8 /* Logger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BCD60D204F3B4D0039E1A8 /* Logger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32BCD5F7204F12C00039E1A8 /* Logger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +280,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -332,6 +333,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -354,7 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stbraun.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -377,7 +379,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stbraun.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
